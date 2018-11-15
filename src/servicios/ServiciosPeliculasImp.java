@@ -7,22 +7,23 @@ public class ServiciosPeliculasImp implements IServicios{
 		
 	}
 	
-	public boolean update(String nombre){
-		return false;
+	public void update(String nombre){
+	
 		
 	}
 	
-	public boolean add(String nombre){
-		return false;
+	public void add(String nombre){
+
 	}
 	
-	public boolean delete(String nombre)
+	public void delete(String nombre)
 	{
-		return false;
+	
 	}
 	
-	public boolean read(String nombre){
-		return false;
+	public String read(String nombre){
+		
+		return nombre;
 	}
 	
 }
