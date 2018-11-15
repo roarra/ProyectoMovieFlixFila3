@@ -1,5 +1,5 @@
 package servicios;
 
-public class IServicios {
+public interface IServicios {
 
 }
