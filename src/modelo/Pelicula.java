@@ -3,7 +3,7 @@ package modelo;
 public class Pelicula {
 	
 	private String nombre;
-	private int anioEstreno;
+	private int fechaEstreno;
 	private String categoria;
 	
 	
@@ -12,10 +12,10 @@ public class Pelicula {
 	}
 	
 	
-	public Pelicula(String nombre, int anioEstreno, String categoria) {
+	public Pelicula(String nombre, int fechaEstreno, String categoria) {
 		super();
 		this.nombre = nombre;
-		this.anioEstreno = anioEstreno;
+		this.fechaEstreno = fechaEstreno;
 		this.categoria = categoria;
 	}
 
@@ -26,11 +26,11 @@ public class Pelicula {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getAnioEstreno() {
-		return anioEstreno;
+	public int getfechaEstreno() {
+		return fechaEstreno;
 	}
-	public void setAnioEstreno(int anioEstreno) {
-		this.anioEstreno = anioEstreno;
+	public void setfechaEstreno(int fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
 	}
 	public String getCategoria() {
 		return categoria;
@@ -38,9 +38,23 @@ public class Pelicula {
 	public void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
+	
 	@Override
 	public String toString() {
-		return "Pelicula [nombre=" + nombre + ", anioEstreno=" + anioEstreno + ", categoria=" + categoria + "]";
+		return "Pelicula [nombre=" + nombre + ", anioEstreno=" + fechaEstreno + ", categoria=" + categoria + "]";
+	}
+	
+	
+	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria ){
+		
+		Pelicula p = new Pelicula();
+		
+		p.setNombre(nombre);
+		p.setfechaEstreno(fechaEstreno);
+		p.setCategoria(categoria);
+		
+		return p;
+		
 	}
 	
 	
