@@ -1,14 +1,27 @@
 package servicios;
 
+import datos.UsuariosImp;
+import modelo.Usuario;
+
 public abstract class ServiciosUsuarioImp implements IServiciosUsuario {
+	
+	Usuario u = new Usuario();
 	
 	public boolean ckeck(String nombre){
 		
 		return true;
 	}
 
-	public void add(String nombre){
+	public Usuario add(){
 		
+		u.crearUsuario();
+		
+		return u;
+	}
+	
+	public Usuario add(Usuario usuario){
+		
+		return UsuariosImp.add(usuario);
 	}
 	
 	public void delete(String nombre){

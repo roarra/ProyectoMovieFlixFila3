@@ -1,9 +1,38 @@
 package datos;
 
-public 
-class UsuariosImp implements IDatosUsuario {
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import datos.Conexion;
+import modelo.Usuario;
+import servicios.ServiciosUsuarioImp;
 
-	public void add(String nombre){
+public abstract class UsuariosImp implements IDatosUsuario {
+	
+	Conexion conexion = new Conexion();
+
+	public void add(Usuario usuario){
+		
+
+		
+		Statement st = null;
+
+		try {
+
+			st = conexion.getConnection().createStatement();
+
+			st.executeUpdate(
+					"INSERT INTO PRODUCTOS(NOMBRE, CATEGORIA, STOCK)" + "VALUES ('" + usuario.getNombreCompleto()
+							+ "', '" + usuario.getfechaNacimiento() + "'," + usuario.getCiudadResidencia() + ");");
+
+			conexion.close();
+		}
+
+		catch (SQLException ex) {
+
+			ex.printStackTrace();
+
+		}
 		
 	}
 	
