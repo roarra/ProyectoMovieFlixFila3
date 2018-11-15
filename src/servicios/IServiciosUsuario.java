@@ -1,6 +1,6 @@
 package servicios;
 
-public interface IServicios {
+public interface IServiciosUsuario {
 	
 	public boolean check(String nombre);
 	

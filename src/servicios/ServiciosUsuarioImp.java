@@ -1,6 +1,6 @@
 package servicios;
 
-public abstract class ServiciosUsuarioImp implements IServicios {
+public abstract class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public boolean ckeck(String nombre){
 		
