@@ -1,6 +1,6 @@
 package datos;
 
-public interface IDatos {
+public interface IDatosUsuario {
 	
 	public void add(String nombre);
 	

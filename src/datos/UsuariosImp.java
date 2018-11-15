@@ -1,6 +1,6 @@
 package datos;
 
-public abstract class UsuariosImp implements IDatos {
+public class UsuariosImp implements IDatosUsuario {
 
 	public void add(String nombre){
 		
