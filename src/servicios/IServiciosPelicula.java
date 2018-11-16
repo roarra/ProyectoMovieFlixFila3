@@ -1,5 +1,7 @@
 package servicios;
 
+import java.util.List;
+
 import modelo.Pelicula;
 
 public interface IServiciosPelicula {
@@ -15,4 +17,6 @@ public boolean check(String nombre);
 	public void delete(String nombre);
 	
 	public String read(String nombre);
+	
+	public List<Pelicula> listFilms();
 }
