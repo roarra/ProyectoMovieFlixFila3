@@ -45,12 +45,12 @@ public class Pelicula {
 	}
 	
 	
-	public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria ){
+	public Pelicula crearPelicula(String nombre, String fechaEstreno2, String categoria ){
 		
 		Pelicula p = new Pelicula();
 		
 		p.setNombre(nombre);
-		p.setfechaEstreno(fechaEstreno);
+		p.setfechaEstreno(fechaEstreno2);
 		p.setCategoria(categoria);
 		
 		return p;

@@ -96,7 +96,7 @@ public class Usuario {
 	}
 
 
-	public Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, Date fechaRegistro){
+	public static Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, Date fechaRegistro){
 		
 		Usuario u = new Usuario();
 		

@@ -11,6 +11,7 @@ import datos.Conexion;
 public class PeliculasImp implements IDatosPelicula{
 
 	public void add(Pelicula pelicula) {
+		
 
 		Statement st = null;
 

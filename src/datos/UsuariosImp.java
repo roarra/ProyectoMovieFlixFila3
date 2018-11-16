@@ -12,10 +12,9 @@ import modelo.Usuario;
 
 public class UsuariosImp implements IDatosUsuario {
 	
-	Conexion conexion = new Conexion();
+	static Conexion conexion = new Conexion();
 
 	public void add(Usuario usuario){
-		
 
 		
 		Statement st = null;
@@ -54,7 +53,7 @@ public class UsuariosImp implements IDatosUsuario {
 		try {
 
 			st = conexion.getConnection().createStatement();
-			rs = st.executeQuery("SELECT * FROM productos WHERE CODIGO = " + nombre + ";");
+			rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre = " + nombre + ";");
 
 			while (rs.next()) {
 				
