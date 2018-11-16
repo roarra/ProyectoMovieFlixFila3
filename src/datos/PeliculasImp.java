@@ -9,7 +9,7 @@ import modelo.Pelicula;
 
 public class PeliculasImp implements IDatosPelicula{
 
-	public void add(String nombre) {
+	public void add(Pelicula pelicula) {
 
 	}
 
