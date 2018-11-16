@@ -39,6 +39,19 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	public void delete(String nombre){
 		
+		Statement st = null;
+		
+		try {
+			
+			st = Conexion.getConnection().createStatement();
+			st.executeUpdate("DELETE FROM usuarios WHERE nombre = '" + nombre + "';");
+		}
+		catch (SQLException ex) {
+
+			ex.printStackTrace();
+
+		}
+		
 	}
 	
 	public String read(String nombre){
@@ -52,7 +65,7 @@ public class UsuariosImp implements IDatosUsuario {
 		try {
 
 			st = conexion.getConnection().createStatement();
-			rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre = " + nombre + ";");
+			rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre = '" + nombre + "';");
 
 			while (rs.next()) {
 				
