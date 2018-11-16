@@ -36,7 +36,16 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 		
 		return nombre;
 	}
+	
+	public static void cargarPeliculas(){
+		String url = "fichero.txt";
+		cargarPeliculas(url);
+	}
 
+	public static void cargarPeliculas(String url){
+		PeliculasImp.cargarPelis(url);;
+		
+	}
 	@Override
 	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria) {
 		// TODO Auto-generated method stub

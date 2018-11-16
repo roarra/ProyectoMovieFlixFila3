@@ -27,7 +27,6 @@ public class UsuariosImp implements IDatosUsuario {
 					"INSERT INTO usuario(nombre, fechaNacimiento, ciudad, fechaAbono) VALUES ('" + usuario.getNombreCompleto()
 							+ "', '" + usuario.getfechaNacimiento() + "'," + usuario.getCiudadResidencia() + usuario.getFechaRegistro()+ ");");
 
-			conexion.close();
 		}
 
 		catch (SQLException ex) {
