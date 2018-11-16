@@ -12,10 +12,9 @@ import modelo.Usuario;
 
 public class UsuariosImp implements IDatosUsuario {
 	
-	Conexion conexion = new Conexion();
+	static Conexion conexion = new Conexion();
 
-	public void add(Usuario usuario){
-		
+	public static void add(Usuario usuario){
 
 		
 		Statement st = null;

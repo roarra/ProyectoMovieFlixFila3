@@ -23,7 +23,7 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	
 	public void add(Pelicula pelicula){
 		
-		return PeliculasImp.add(pelicula);
+		PeliculasImp.add(pelicula);
 
 	}
 	
