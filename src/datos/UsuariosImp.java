@@ -40,6 +40,19 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	public void delete(String nombre){
 		
+		Statement st = null;
+		
+		try {
+			
+			st = Conexion.getConnection().createStatement();
+			st.executeUpdate("DELETE FROM usuarios WHERE nombre = '" + nombre + "';");
+		}
+		catch (SQLException ex) {
+
+			ex.printStackTrace();
+
+		}
+		
 	}
 	
 	public String read(String nombre){
