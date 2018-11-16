@@ -1,8 +1,10 @@
 package datos;
 
+import modelo.Usuario;
+
 public interface IDatosUsuario {
 	
-	public void add(String nombre);
+	public void add(Usuario nombre);
 	
 	public void delete(String nombre);
 	
