@@ -3,7 +3,7 @@ package modelo;
 public class Pelicula {
 	
 	private String nombre;
-	private int fechaEstreno;
+	private String fechaEstreno;
 	private String categoria;
 	
 	
@@ -12,7 +12,7 @@ public class Pelicula {
 	}
 	
 	
-	public Pelicula(String nombre, int fechaEstreno, String categoria) {
+	public Pelicula(String nombre, String fechaEstreno, String categoria) {
 		super();
 		this.nombre = nombre;
 		this.fechaEstreno = fechaEstreno;
@@ -26,10 +26,10 @@ public class Pelicula {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	public int getfechaEstreno() {
+	public String getfechaEstreno() {
 		return fechaEstreno;
 	}
-	public void setfechaEstreno(int fechaEstreno) {
+	public void setfechaEstreno(String fechaEstreno) {
 		this.fechaEstreno = fechaEstreno;
 	}
 	public String getCategoria() {
@@ -45,7 +45,7 @@ public class Pelicula {
 	}
 	
 	
-	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria ){
+	public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria ){
 		
 		Pelicula p = new Pelicula();
 		

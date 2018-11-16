@@ -10,7 +10,7 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 		
 		}
 		
-		public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria ){
+		public Pelicula crearPelicula(String nombre, String fechaEstreno, String categoria ){
 			
 			return new Pelicula().crearPelicula(nombre, fechaEstreno, categoria);
 			
