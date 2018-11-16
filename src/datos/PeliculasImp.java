@@ -37,8 +37,43 @@ public class PeliculasImp implements IDatosPelicula{
 	}
 
 	public String read(String nombre) {
+		
+		Statement st = null;
+		ResultSet rs = null;
+		ResultSet rs1 = null;
 
-		return nombre;
+		Pelicula pelicula = new Pelicula();
+		List<Pelicula> lista = new ArrayList<>();
+
+		try {
+
+			st = Conexion.getConnection().createStatement();
+			rs = st.executeQuery("SELECT * FROM peliculas WHERE nombre = ''" + nombre + "'';");
+
+			while (rs.next()) {
+				
+				pelicula.setNombre(rs.getNString("nombre"));
+				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
+				int idcat = rs.getInt("IDCategoria");
+				rs1 = st.executeQuery("SELECT nombre FROM categoria WHERE IDCategoria =" + idcat );
+				pelicula.setCategoria(rs1.getString("nombre"));
+				
+
+				lista.add(pelicula);
+
+				pelicula = lista.get(0);
+
+			}
+
+		} catch (SQLException ex) {
+
+			ex.printStackTrace();
+
+		}
+
+		return pelicula.toString();
+
+   
 	}
 
 	public void update(String nombre) {
