@@ -43,8 +43,9 @@ public class PeliculasImp implements IDatosPelicula{
 				Pelicula pelicula = new Pelicula();
 
 				pelicula.setNombre(rs.getString("nombre"));
-				pelicula.setfechaEstreno(rs.getInt("añoEstreno"));
-
+				pelicula.setfechaEstreno(rs.getString("añoEstreno"));
+				pelicula.setCategoria(rs.getString("CATEGORIA"));
+			
 				lista.add(pelicula);
 
 			}
