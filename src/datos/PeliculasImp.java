@@ -27,6 +27,6 @@ public class PeliculasImp implements IDatosPelicula{
 		
 		
 		
-		return lista;
+		return List;
 	}
-}
+} 

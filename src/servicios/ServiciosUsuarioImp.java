@@ -21,7 +21,7 @@ public abstract class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public Usuario add(Usuario usuario){
 		
-		return UsuariosImp.add(usuario);
+		return ServiciosUsuarioImp.add(usuario);
 	}
 	
 	public void delete(String nombre){
@@ -36,4 +36,4 @@ public abstract class ServiciosUsuarioImp implements IServiciosUsuario {
 	public void update(String nombre){
 		
 	}
-}
+} 

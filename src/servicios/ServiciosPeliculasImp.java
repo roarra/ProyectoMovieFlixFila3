@@ -1,6 +1,6 @@
 package servicios;
 
-public class ServiciosPeliculasImp implements IServiciosUsuario{
+public class ServiciosPeliculasImp implements IServiciosPelicula{
 
 	public boolean check(String nombre){
 		return false;
@@ -27,3 +27,4 @@ public class ServiciosPeliculasImp implements IServiciosUsuario{
 	}
 	
 }
+ 
