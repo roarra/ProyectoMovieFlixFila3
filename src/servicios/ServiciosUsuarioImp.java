@@ -27,7 +27,7 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public void add(Usuario usuario){
 
-		UsuariosImp.add(usuario);
+		new UsuariosImp().add(usuario);
 
 	
 	}

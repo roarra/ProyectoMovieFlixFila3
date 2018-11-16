@@ -14,7 +14,7 @@ public class UsuariosImp implements IDatosUsuario {
 	
 	static Conexion conexion = new Conexion();
 
-	public static void add(Usuario usuario){
+	public void add(Usuario usuario){
 
 		
 		Statement st = null;

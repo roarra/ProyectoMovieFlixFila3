@@ -23,7 +23,7 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	
 	public void add(Pelicula pelicula){
 		
-		PeliculasImp.add(pelicula);
+		new PeliculasImp().add(pelicula);
 
 	}
 	
@@ -35,6 +35,12 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	public String read(String nombre){
 		
 		return nombre;
+	}
+
+	@Override
+	public Pelicula crearPelicula(String nombre, int fechaEstreno, String categoria) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 }

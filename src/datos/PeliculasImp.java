@@ -10,7 +10,7 @@ import datos.Conexion;
 
 public class PeliculasImp implements IDatosPelicula{
 
-	public static void add(Pelicula pelicula) {
+	public void add(Pelicula pelicula) {
 		
 
 	}
