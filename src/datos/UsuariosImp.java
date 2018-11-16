@@ -1,13 +1,13 @@
 package datos;
 
-import java.sql.Connection;
+
 import java.sql.SQLException;
 import java.sql.Statement;
 import datos.Conexion;
 import modelo.Usuario;
-import servicios.ServiciosUsuarioImp;
 
-public abstract class UsuariosImp implements IDatosUsuario {
+
+public class UsuariosImp implements IDatosUsuario {
 	
 	Conexion conexion = new Conexion();
 
@@ -22,7 +22,7 @@ public abstract class UsuariosImp implements IDatosUsuario {
 			st = conexion.getConnection().createStatement();
 
 			st.executeUpdate(
-					"INSERT INTO PRODUCTOS(NOMBRE, CATEGORIA, STOCK)" + "VALUES ('" + usuario.getNombreCompleto()
+					"INSERT INTO PRODUCTOS(NOMBRE, CATEGORIA, STOCK) VALUES ('" + usuario.getNombreCompleto()
 							+ "', '" + usuario.getfechaNacimiento() + "'," + usuario.getCiudadResidencia() + ");");
 
 			conexion.close();

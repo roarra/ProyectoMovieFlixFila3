@@ -1,27 +1,33 @@
 package servicios;
 
+import java.util.Date;
+
+import datos.IDatosUsuario;
 import datos.UsuariosImp;
 import modelo.Usuario;
 
-public abstract class ServiciosUsuarioImp implements IServiciosUsuario {
+public class ServiciosUsuarioImp implements IServiciosUsuario {
 	
-	Usuario u = new Usuario();
+	//Usuario u = new Usuario();
 	
-	public boolean ckeck(String nombre){
+	IDatosUsuario datosU = new UsuariosImp();
+	
+	public boolean check(String nombre){
 		
 		return true;
 	}
 
-	public Usuario add(){
+	public Usuario crearUsuario(String nombreCompleto, String fechaNacimiento, String ciudadResidencia, String paqueteAbono, Date fechaRegistro){
 		
-		u.crearUsuario();
+		return new Usuario().crearUsuario(nombreCompleto, fechaNacimiento, ciudadResidencia, paqueteAbono, fechaRegistro);
 		
-		return u;
+		
+		/*return u;*/
 	}
 	
-	public Usuario add(Usuario usuario){
+	public void add(Usuario usuario){
 		
-		return UsuariosImp.add(usuario);
+	 datosU.add(usuario);   /*return UsuariosImp.add(usuario);*/
 	}
 	
 	public void delete(String nombre){
