@@ -6,10 +6,11 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import modelo.Pelicula;
+import datos.Conexion;
 
 public class PeliculasImp implements IDatosPelicula{
 
-	public void add(String nombre) {
+	public void add(Pelicula pelicula) {
 
 	}
 
@@ -28,33 +29,26 @@ public class PeliculasImp implements IDatosPelicula{
 	
 	public List<Pelicula> listFilms(){
 		
-
-	
-
-
-		List<Producto> lista = new ArrayList<>();
+		List<Pelicula> lista = new ArrayList<>();
 		Statement st = null;
 		ResultSet rs = null;
 
 		try {
 
-			st = conexion.createStatement();
-			rs = st.executeQuery("SELECT * FROM productos;");
+			st = Conexion.getConnection().createStatement();
+			rs = st.executeQuery("SELECT * FROM peliculas;");
 
 			while (rs.next()) {
 
-				Producto producto = new Producto();
+				Pelicula pelicula = new Pelicula();
 
-				producto.setCodigo(rs.getInt("CODIGO"));
-				producto.setNombreProducto(rs.getString("NOMBRE"));
-				producto.setCategoria(Categoria.valueOf(rs.getString("CATEGORIA")));
-				producto.setStock(rs.getInt("STOCK"));
+				pelicula.setNombre(rs.getString("nombre"));
+				pelicula.setfechaEstreno(rs.getInt("añoEstreno"));
 
-				lista.add(producto);
+				lista.add(pelicula);
 
 			}
 
-			conexion.close();
 		} catch (SQLException ex) {
 
 			ex.printStackTrace();

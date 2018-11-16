@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
 	
-	Connection connection = null;
+	static Connection connection = null;
 	String DB = "supermercado";
 	String driverClassName = "com.mysql.cj.jdbc.Driver";
 	String driverUrl = "jdbc:mysql://10.90.36.10/proyecto-fila3";
@@ -26,7 +26,7 @@ public class Conexion {
         }
     }
 
-    public Connection getConnection() {
+    public static Connection getConnection() {
         return connection;
     }
 
