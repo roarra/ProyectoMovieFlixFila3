@@ -53,7 +53,7 @@ public class UsuariosImp implements IDatosUsuario {
 		try {
 
 			st = conexion.getConnection().createStatement();
-			rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre = " + nombre + ";");
+			rs = st.executeQuery("SELECT * FROM usuarios WHERE nombre = '" + nombre + "';");
 
 			while (rs.next()) {
 				
