@@ -34,10 +34,12 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public void delete(String nombre){
 		
-		
+		new UsuariosImp().delete(nombre);
 	}
 	
 	public String read(String nombre){
+		
+		new UsuariosImp().read(nombre);
 		
 		return nombre;
 	}

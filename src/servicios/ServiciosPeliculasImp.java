@@ -34,6 +34,8 @@ public class ServiciosPeliculasImp implements IServiciosPelicula{
 	
 	public String read(String nombre){
 		
+		new PeliculasImp().read(nombre);
+		
 		return nombre;
 	}
 	
