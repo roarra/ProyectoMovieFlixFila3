@@ -34,6 +34,7 @@ public class ServiciosUsuarioImp implements IServiciosUsuario {
 	
 	public void delete(String nombre){
 		
+		
 	}
 	
 	public String read(String nombre){
